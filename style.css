@@ -1,0 +1,89 @@
+/*
+Theme Name: testing
+Author: ttesting
+Author URI: https://wordpress.org/
+Description: testing
+Version: 1.3
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: testing
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+#intro {
+    background-image: url("BG2.png");
+    height: 100vh;
+  
+  }
+  #curtainLeft {
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 0;
+    height: 0;
+    z-index: 4;
+    animation-name: moveLeft;
+    animation: moveLeft 4s 0s 1 linear;
+   
+  }
+  #curtainRight{
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 0;
+    height: 0;
+    z-index: 4;
+    animation: moveRight 4s 0s 1 linear;
+  
+  }
+  #section {
+    margin: auto;
+    width: 50%;
+    height: 100%;
+  }
+  #test{
+    opacity:1;
+    color:blue;
+    animation: blinker 5s 1s 10 linear;
+  }
+  .neonText {
+color: #fff;
+text-shadow:
+  0 0 7px #fff,
+  0 0 10px #fff,
+  0 0 21px #fff,
+  0 0 42px #0fa,
+  0 0 82px #0fa,
+  0 0 92px #0fa,
+  0 0 102px #0fa,
+  0 0 151px #0fa;
+}
+
+
+@keyframes blinker{ 
+0% {opacity:0;}
+25% {opacity:1;}
+50% {opacity:0;}
+100% {opacity:1;}
+
+}  
+@keyframes moveLeft{ 
+  0% {right:50%; width:50%; height: 100%;}
+  25% {right:62%;width:50%;height:100%}
+  50% {right:74%;width:50%;height: 100%;}
+  75% {right:86%;width:50%;height: 100%;}
+  100% {right:100%;width:50%;height:100%;}
+  }  
+  @keyframes moveRight{ 
+    0% {left:50%; width:50%; height: 100%;}
+    25% {left:62%;width:50%;height:100%}
+    50% {left:74%;width:50%;height: 100%;}
+    75% {left:86%;width:50%;height: 100%;}
+    100% {left:100%;width:50%;height:100%;}
+    }  
