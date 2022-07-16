@@ -14,6 +14,13 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
+/* Override Bootstrap defaults to center that white block of content;
+If you don't want all rows to display this way, then replace the classname ".row" below with an id and place that id in the HTML */
+.row {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #intro {
     background-image: url("BG2.png");
     height: 100vh;
@@ -44,7 +51,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
   }
   #section {
     margin: auto;
-    width: 50%;
     height: 100%;
   }
   #test{
@@ -87,3 +93,19 @@ text-shadow:
     75% {left:86%;width:50%;height: 100%;}
     100% {left:100%;width:50%;height:100%;}
     }  
+
+/* Responsive Overrides */
+/*Bootstrap Breakpoints Quick Reference:
+0px - 576px (phones) DEFAULT
+576px -  786px (small tablets) SM
+786px - 992px (large tablets, like iPads) MD
+992px - 1200px (small desktop screens) LG
+1200px+ (large desktop screens) XL
+*/
+
+/* You set this width at 50% for all screens, but really you'd only want it that way on larger screens. Also, specify column numbers 1-12 to set a width on a container div using Bootstrap classes; only specify the width on specific content elements, like images, paragraphs, headers, etc... */
+@media (min-width: 1200px) {
+  #intro > #section {
+    width: 50%;
+  }
+}
